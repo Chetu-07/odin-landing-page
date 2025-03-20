@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto',sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #e7e5eb;
+}
+header{
+    display :flex;
+    justify-content: space-around;
+    background-color: #1F2937;
+
+}
+
+header p{
+    font-weight: 900;
+    font-size: 24px;
+    color: #F9FAF8;
+}
+header div{
+    display: flex;
+    gap: 10px;
+}
