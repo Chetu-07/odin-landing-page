@@ -95,5 +95,24 @@ header div{
 .i-item p{
     flex: 1 1 0;
     align-self: center;
+}
+
+.thor{
+    background-color: #e7e5eb;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 10%;
+}
+
+.thor p:nth-child(1){
     
+    font-style: italic;
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 300 ;
+
+}
+.thor p:nth-child(2){
+    text-align: right;
+    font-weight: bold;
 }
