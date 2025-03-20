@@ -58,7 +58,42 @@ header div{
     font-size: 18px;
 }
 .d-container img{
-    max-width: 50%; /* Adjust as needed */
+    max-width: 364px;
     height: auto
 }
+.i-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10%;
+}
+.i-container > p {
+    margin-bottom: 2rem; 
+    font-size: 36px;     
+    color: #1F2937;      
+    font-weight: 900;    
+  }
 
+.i-item{
+    display: flex;
+    gap : 20px;
+    justify-content: center;
+}
+.i-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.i-item img{
+    max-width: 150px;
+    max-height: 150px;
+    border: 2px solid #3882F6;
+    flex :1 1 0;
+    border-radius: 15px;
+}
+.i-item p{
+    flex: 1 1 0;
+    align-self: center;
+    
+}
