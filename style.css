@@ -7,11 +7,25 @@ a{
     text-decoration: none;
     color: #e7e5eb;
 }
+button{
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
 header{
     display :flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #1F2937;
-
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
 }
 
 header p{
@@ -23,3 +37,28 @@ header div{
     display: flex;
     gap: 10px;
 }
+.d-container{
+    display: flex;
+    background-color: #1F2937;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap:60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+}
+.d-container p:nth-child(1){
+    color: #F9FAF8; 
+    font-size: 48px;
+    font-weight: 900;   
+}
+.d-container p:nth-child(2){
+    color: #e7e5eb;
+    font-size: 18px;
+}
+.d-container img{
+    max-width: 50%; /* Adjust as needed */
+    height: auto
+}
+
