@@ -9,18 +9,41 @@
     flex-direction: column;
     justify-content: center;
 }
+:root {
+    --header-link-size: 16px; /* Default size variable */
+}
 a{
     text-decoration: none;
     color: #e7e5eb;
+    font-size: var(--header-link-size);
+    transition: all 0.5s;
 }
+
+a:hover{
+    color: rgb(189, 78, 78);
+    font-size: calc(var(--header-link-size) * 1.25); /* Increase size by 25% */
+    font-weight: 600;
+}
+
+/*Buttons styling*/
+
 button{
     background-color: #3882F6;
     color: #F9FAF8;
     font-weight: 500;
     /* padding: 5px; */
     border-radius: 10px;
-
+    cursor: pointer;
+    transition: background-color 1s;
 }
+button:hover{
+    background-color: #2b371f;
+    box-shadow: 0 10px 15px #1ec36076;
+}
+.top-button {
+    padding: 10px 20px !important; /* Override conflicting styles */
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -123,7 +146,7 @@ header div{
     flex: 1 1 0;
     align-self: center;
 }
-@media (max-width:800px){
+@media (max-width:600px){
     .i-item{
         flex-wrap: wrap;
         padding: 5%;
@@ -156,33 +179,53 @@ header div{
     font-weight: bold;
 }
 
-.s-container{
+@media (max-width:600px){
+    .thor p:nth-child(1){
+        font-style: italic;
+        color: #1F2937;
+        font-size: 20px;
+        font-weight: 300 ;
+
+        
+    }
+}
+
+.s-container {
     display: flex;
     background-color: #3882F6;
-    margin : 40px 60px;
-    justify-content: center;
+    justify-content: space-between; /* Changed from center to space-between */
     padding: 40px;
     border-radius: 15px;
     color: #F9FAF8;
-    gap: 50px;
-    max-width: fit-content;
+    width: 800px; /* Add a fixed width */
     margin: 1em auto 1em auto;
 }
 
-.s-item{
-    display: flex;
-    flex-direction: column;
-}
-.s-item p:nth-child(1){
-    font-weight: bold;
-}
-
-.s-container button{
+.s-container button {
     border: 2px solid #F9FAF8;
-    align-items: flex-end;
     white-space: nowrap;
     padding: 5px 20px;
-   
+    width: 120px; /* Fixed width for button */
+    height: 50px; /* Fixed height for button */
+}
+.s-container button:hover{
+    background-color: #2b371f;
+    box-shadow: 0 10px 15px #713118a8;
+}
+@media (max-width:600px) {
+    .s-container {
+        width: 90%; /* Use percentage for small screens */
+        padding: 20px;
+        flex-direction: column; /* Stack elements on small screens */
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .s-container button {
+        width: 100px; /* Smaller fixed width for mobile */
+        height: 40px; /* Smaller fixed height for mobile */
+        padding: 5px;
+    }
 }
 
 footer{
@@ -201,6 +244,5 @@ footer{
 header, footer {
     flex: 0 0 auto; /* Fixed height */
 }
-.top-button {
-    padding: 10px 20px !important; /* Override conflicting styles */
-}
+
+
