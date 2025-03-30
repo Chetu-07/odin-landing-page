@@ -11,19 +11,9 @@
 }
 :root {
     --header-link-size: 16px; /* Default size variable */
-}
-a{
-    text-decoration: none;
-    color: #e7e5eb;
-    font-size: var(--header-link-size);
-    transition: all 0.5s;
+    --header-link-size-mobile:10px;/*mobile default vatiable*/
 }
 
-a:hover{
-    color: rgb(189, 78, 78);
-    font-size: calc(var(--header-link-size) * 1.25); /* Increase size by 25% */
-    font-weight: 600;
-}
 
 /*Buttons styling*/
 
@@ -31,10 +21,10 @@ button{
     background-color: #3882F6;
     color: #F9FAF8;
     font-weight: 500;
-    /* padding: 5px; */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 1s;
+    border:1px;
 }
 button:hover{
     background-color: #2b371f;
@@ -63,10 +53,48 @@ header p{
     font-size: 24px;
     color: #F9FAF8;
 }
-header div{
+.header-link-div{
     display: flex;
     gap: 10px;
 }
+.header-link-div a{
+    text-decoration: none;
+    color: #e7e5eb;
+    font-size: var(--header-link-size);
+    transition: all 0.5s;
+    padding-bottom: 4px;
+}
+
+.header-link-div a:hover{
+    color: rgb(189, 78, 78);
+    font-size: calc(var(--header-link-size) * 1.25); /* Increase size by 25% */
+    font-weight: 600;
+}
+
+@media (max-width:600px){
+    header {
+        flex-direction: column;
+        gap : 10px;
+    }
+    .header-link-div a{
+        font-size: var(--header-link-size-mobile);
+    }
+    
+    .header-link-div a:hover{
+        font-size: calc(var(--header-link-size-mobile) * 1.25); /* Increase size by 25% */
+
+    }
+    
+    .top-button{
+        padding: 5px !important;
+        align-items: center !important;
+
+    }
+    
+
+}
+    
+
 .d-container{
     display: flex;
     background-color: #1F2937;
@@ -94,9 +122,29 @@ header div{
 .d-container img{
     max-width: 200px;
 }
+.d-item{}
 @media (max-width:600px){
     .d-container{
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap :5px;
+    }
+    .d-container p:nth-child(1){
+        color: #F9FAF8; 
+        font-size: 24px;
+        font-weight: 900;   
+    }
+    .d-container p:nth-child(2){
+        color: #e7e5eb;
+        font-size: 9px;
+    }
+    .d-item{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -147,6 +195,11 @@ header div{
     align-self: center;
 }
 @media (max-width:600px){
+    .i-container p{
+        font-size: 25px;
+        text-align: center;
+    }
+    
     .i-item{
         flex-wrap: wrap;
         padding: 5%;
